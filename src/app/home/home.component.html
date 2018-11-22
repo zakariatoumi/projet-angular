@@ -1,3 +1,30 @@
 <div class="container-fluid">
 <img src="assets/img/img3.png" class="img-fluid" width="100%" height="50%" alt="Responsive image">
+
+<h2 *ngFor="let personne of personnes">{{ personne.nom }}</h2>
+<p>{{ employe }}</p>
+<!--<p *ngIf="voirPrenom">{{ prenom }}</p>-->
+<p *ngIf="voirPrenom; else noPrenom">{{ prenom }}</p>
+<ng-template #noPrenom>Word</ng-template>
+
+<p>hello {{ voirPrenom ? prenom : 'word' }}</p>
+
+<hr>
+<div><img src="{{ imageUrl }}" alt=""></div>
+<div><img [src]="imageUrl" alt=""></div>
+<div><img bind-src="imageUrl" alt=""></div>
+<div [ngSwitch]="nombre">
+    <div *ngSwitchCase="'1'">zakaria</div>
+    <div *ngSwitchCase="'2'">yassine</div>
+    <div *ngSwitchCase="'3'">khalid</div>
+    <div *ngSwitchDefault>ddd</div>
+</div>
+
+<h3>lien image : <span [textContent]="imageUrl"></span></h3>
+
+<h3>je suis zakaria</h3>
+<p [hidden]="valide">je m'appelle zakaria</p>
+<button [disabled]="valide">ajouter</button>
+
+
 </div>
