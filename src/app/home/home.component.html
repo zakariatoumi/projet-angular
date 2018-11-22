@@ -7,9 +7,12 @@
 <p *ngIf="voirPrenom; else noPrenom">{{ prenom }}</p>
 <ng-template #noPrenom>Word</ng-template>
 
+<hr>
+
 <p>hello {{ voirPrenom ? prenom : 'word' }}</p>
 
 <hr>
+
 <div><img src="{{ imageUrl }}" alt=""></div>
 <div><img [src]="imageUrl" alt=""></div>
 <div><img bind-src="imageUrl" alt=""></div>
@@ -20,7 +23,11 @@
     <div *ngSwitchDefault>ddd</div>
 </div>
 
+<hr>
+
 <h3>lien image : <span [textContent]="imageUrl"></span></h3>
+
+<hr>
 
 <h3>je suis zakaria</h3>
 <p [hidden]="valide">je m'appelle zakaria</p>
