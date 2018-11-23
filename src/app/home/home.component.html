@@ -13,9 +13,12 @@
 
 <hr>
 
-<div><img src="{{ imageUrl }}" alt=""></div>
-<div><img [src]="imageUrl" alt=""></div>
+<div><img src="{{ imageUrl }}" alt=""></div><br>
+<div><img [src]="imageUrl" alt=""></div><br>
 <div><img bind-src="imageUrl" alt=""></div>
+
+<hr>
+
 <div [ngSwitch]="nombre">
     <div *ngSwitchCase="'1'">zakaria</div>
     <div *ngSwitchCase="'2'">yassine</div>
@@ -32,6 +35,14 @@
 <h3>je suis zakaria</h3>
 <p [hidden]="valide">je m'appelle zakaria</p>
 <button [disabled]="valide">ajouter</button>
+
+<hr>
+
+
+    <p [class.para]="active"> commment utiliser une variable pour activer le css ?  </p>
+
+    <h4 [ngClass]="currentClasses"> commment utiliser ngClass pour activer le css ? </h4>
+
 
 
 </div>

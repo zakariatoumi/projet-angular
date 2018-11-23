@@ -1,0 +1,23 @@
+<div class="container">
+<p>
+  Voici date aujourd'huit : {{ dateAujourdhuit | date }}
+</p>
+<p>
+  ordre de la date : {{ dateAujourdhuit | date:"MM-dd-yyyy" }}
+</p>
+<p>
+  voir justement l'annee : {{ dateAujourdhuit | date:"yyyy" }}
+</p>
+<p>
+  j'aime le  : {{ 'sport' | uppercase }}
+</p>
+<p>
+  je n'aime pas le  : {{ 'MATIN' | lowercase }}
+</p>
+<p>
+  le total est : {{ total | currency:"GBP" }}
+</p>
+<p>
+  le pourcentage est : {{ fee | percent }}
+</p>
+</div>
