@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -9,6 +10,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { TestComponent } from './test/test.component';
 import { TestDateComponent } from './test-date/test-date.component';
 import { EventComponent } from './event/event.component';
+import { ChangingPropertiesWithEventsComponent } from './changing-properties-with-events/changing-properties-with-events.component';
+import { KeyboardInputEventsComponent } from './keyboard-input-events/keyboard-input-events.component';
 
 const routes:Routes = [
   {path:'' , redirectTo:'home' , pathMatch:'full'},
@@ -16,7 +19,9 @@ const routes:Routes = [
   {path:'ajouter' , component:AjouterComponent},
   {path:'test' , component:TestComponent},
   {path:'test-date' , component:TestDateComponent},
-  {path:'appEvent' , component:EventComponent}
+  {path:'appEvent' , component:EventComponent},
+  {path:'ChangingPropertiesWithEvents' , component:ChangingPropertiesWithEventsComponent},
+  {path:'KeyboardInputEventsComponent' , component:KeyboardInputEventsComponent}
 
 ]
 
@@ -28,11 +33,14 @@ const routes:Routes = [
     AjouterComponent,
     TestComponent,
     TestDateComponent,
-    EventComponent
+    EventComponent,
+    ChangingPropertiesWithEventsComponent,
+    KeyboardInputEventsComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
