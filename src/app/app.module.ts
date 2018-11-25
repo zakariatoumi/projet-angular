@@ -12,6 +12,9 @@ import { TestDateComponent } from './test-date/test-date.component';
 import { EventComponent } from './event/event.component';
 import { ChangingPropertiesWithEventsComponent } from './changing-properties-with-events/changing-properties-with-events.component';
 import { KeyboardInputEventsComponent } from './keyboard-input-events/keyboard-input-events.component';
+import { DataService } from './service/data.service';
+import { CreatingAServiceComponent } from './creating-a-service/creating-a-service.component';
+import { QuestionListComponent } from './question-list/question-list.component';
 
 const routes:Routes = [
   {path:'' , redirectTo:'home' , pathMatch:'full'},
@@ -21,7 +24,11 @@ const routes:Routes = [
   {path:'test-date' , component:TestDateComponent},
   {path:'appEvent' , component:EventComponent},
   {path:'ChangingPropertiesWithEvents' , component:ChangingPropertiesWithEventsComponent},
-  {path:'KeyboardInputEventsComponent' , component:KeyboardInputEventsComponent}
+  {path:'KeyboardInputEventsComponent' , component:KeyboardInputEventsComponent},
+  {path:'CreatingAService' , component:CreatingAServiceComponent},
+  {path:'QuestionList' , component:QuestionListComponent}
+  
+  
 
 ]
 
@@ -35,14 +42,16 @@ const routes:Routes = [
     TestDateComponent,
     EventComponent,
     ChangingPropertiesWithEventsComponent,
-    KeyboardInputEventsComponent
+    KeyboardInputEventsComponent,
+    CreatingAServiceComponent,
+    QuestionListComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     FormsModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
